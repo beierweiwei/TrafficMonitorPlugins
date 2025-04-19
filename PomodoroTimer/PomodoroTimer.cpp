@@ -3,6 +3,7 @@
 #include "PomodoroTimer.h"
 #include "Data.h"
 #include "OptionsDlg.h"
+#include "TimeEndDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

@@ -45,6 +45,9 @@
     <ClCompile Include="UpdateHelper.cpp">
       <Filter>Data</Filter>
     </ClCompile>
+    <ClCompile Include="TimeEndDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="PomodoroTimer.def">
@@ -81,6 +84,12 @@
     </ClInclude>
     <ClInclude Include="UpdateHelper.h">
       <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="IDD_DLG_TIME_END.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeEndDlg.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

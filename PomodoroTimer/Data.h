@@ -74,6 +74,7 @@ public:
     void Update();
 
     void PlaySoundById(int id) const;
+    INT_PTR ShowTimeEndDialog();
 
 private:
     bool NextLoop();

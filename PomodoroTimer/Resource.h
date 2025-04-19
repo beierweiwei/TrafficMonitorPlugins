@@ -49,6 +49,7 @@
 #define IDC_SPIN2                       1019
 #define IDC_SPIN_LONG_BREAK_INTERVAL    1019
 #define IDS_VERSION                     1020
+#define IDD_DLG_TIME_END                1020
 #define ID_FUNC_32771                   32771
 #define ID_FUNC_32772                   32772
 #define ID_FUNC_32773                   32773

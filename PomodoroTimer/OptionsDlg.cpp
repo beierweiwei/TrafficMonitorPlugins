@@ -167,9 +167,7 @@ void COptionsDlg::OnOK()
 	if (data_manager.GetProgramState() != EProgramState::PS_STOPPED)
 	{
 		bool time_changed = (cfg.working_time_span != m_ctrlSpinTimeSpanWork.GetPos() * 60) ||
-			(cfg.break_time_span != m_ctrlSpinTimeSpanShortBreak.GetPos() * 60 ||
-			(cfg.break_time_span_long != m_ctrlSpinTimeSpanLongBreak.GetPos() * 60) ||
-			(cfg.long_break_interval != m_ctrlSpinLongBreakInterval.GetPos()));
+			(cfg.break_time_span != m_ctrlSpinTimeSpanShortBreak.GetPos() * 60);
 
 		if (time_changed)
 			MessageBox(data_manager.StringRes(IDS_OPT_DLG_SAVING_WARN),

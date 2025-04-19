@@ -1,6 +1,6 @@
 ﻿#include "pch.h"
 #include "Data.h"
-
+#include "TimeEndDlg.h"
 #include <ctime>
 #include <thread>
 #include <memory>
@@ -396,6 +396,9 @@ void CDataManager::Update()
             }
 
             if (m_config.play_sound) PlaySoundById(m_config.sound_id);
+            // 发送通知
+            ShowTimeEndDialog();
+            
         }
     }
     else if (m_pt_state == EPomodoroTimerState::PTS_SHORT_BREAK || m_pt_state == EPomodoroTimerState::PTS_LONG_BREAK)
@@ -413,6 +416,22 @@ void CDataManager::Update()
     }
 
     dm::state_data.m_last_update_timestamp = t;
+}
+
+INT_PTR CDataManager::ShowTimeEndDialog()
+{
+    AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
+    if (CTimeEndDlg::m_pInstance != nullptr)
+    {
+        CTimeEndDlg::m_pInstance->BringWindowToTop();
+        return IDCANCEL;
+    }
+    else
+    {
+        CTimeEndDlg dlg;
+        return dlg.DoModal();
+    }
 }
 
 void CDataManager::PlaySoundById(int id) const
